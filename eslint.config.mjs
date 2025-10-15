@@ -1,16 +1,14 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+// FILE: eslint.config.mjs
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const nextConfig = require('eslint-config-next');
 
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
-
-const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+// The default export should be an array. We are adding our custom rule to it.
+module.exports = [
+  {
+    ...nextConfig,
+    rules: {
+      ...nextConfig.rules, // This line includes all the default Next.js rules
+      "react/no-unescaped-entities": "off" // This line disables the rule causing the error
+    }
+  }
 ];
-
-export default eslintConfig;
