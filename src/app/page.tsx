@@ -1,9 +1,9 @@
 // FILE: src/app/page.tsx
 
 import Link from 'next/link';
-import { MessageSquare, Zap, Code } from 'lucide-react'; // Updated icons
+import { MessageSquare, Zap, Code } from 'lucide-react';
 
-// Helper component for feature items
+// This is the full component that was missing
 const FeatureItem = ({ icon, title, children }: { icon: React.ReactNode; title: string; children: React.ReactNode }) => (
   <div className="text-center">
     <div className="flex items-center justify-center h-16 w-16 bg-blue-100 text-blue-600 rounded-full mx-auto mb-4">
@@ -16,6 +16,7 @@ const FeatureItem = ({ icon, title, children }: { icon: React.ReactNode; title: 
 
 
 export default function Home() {
+  // This is the full schema data that was missing
   const softwareApplicationSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -37,7 +38,6 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
       />
       
-      {/* Hero Section */}
       <section className="bg-white py-20 md:py-32">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
@@ -57,7 +57,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Overview Section */}
       <section className="bg-gray-50 py-20">
         <div className="container mx-auto px-6">
            <div className="text-center mb-16">
@@ -78,12 +77,11 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Final CTA Section */}
       <section className="bg-blue-600 text-white">
         <div className="container mx-auto px-6 py-20 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Stop Missing Leads?</h2>
           <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8">
-            Let your website work for you, even when you're not online. Start your free trial today.
+            {"Let your website work for you, even when you're not online. Start your free trial today."}
           </p>
           <Link href="/get-started" className="bg-white text-blue-600 font-bold px-10 py-4 rounded-lg text-lg hover:bg-gray-100 transition-all duration-300">
             Sign Up Now
