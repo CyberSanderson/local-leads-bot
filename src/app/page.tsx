@@ -54,7 +54,7 @@ export default function Home() {
           </h1>
           <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
             Local Lead Bot helps your business collect leads, book appointments, and
-            follow up automatically — so you never miss another opportunity.
+            follow up automatically &mdash; so you never miss another opportunity.
           </p>
           <div className="mt-10 flex justify-center gap-4">
             <Link
@@ -86,7 +86,7 @@ export default function Home() {
             </FeatureItem>
 
             <FeatureItem icon={<Zap className="w-10 h-10" />} title="Automated Follow-Ups">
-              Send instant SMS and email responses to new leads — no manual chasing or delays.
+              Send instant SMS and email responses to new leads &mdash; no manual chasing or delays.
               Stay top of mind while you&apos;re busy running your business.
             </FeatureItem>
 
