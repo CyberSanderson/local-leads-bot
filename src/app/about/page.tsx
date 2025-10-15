@@ -8,7 +8,6 @@ export const metadata: Metadata = {
   description: 'Learn about the team and the mission behind Local Lead Bot. We are dedicated to providing powerful, easy-to-use marketing tools for small businesses to thrive.',
 };
 
-// Simulate team member data
 const teamMembers = [
   {
     name: 'Alex Johnson',
@@ -43,11 +42,11 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }}
       />
       <div className="bg-white">
-        {/* Page Header / Mission */}
         <section className="bg-gray-50 py-16 md:py-24">
           <div className="container mx-auto px-6 text-center">
+            {/* CORRECTED LINE */}
             <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900">
-              We're on a Mission to Help Local Businesses Thrive
+              {"We're on a Mission to Help Local Businesses Thrive"}
             </h1>
             <p className="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">
               In a world dominated by large corporations, we believe in empowering the small, local businesses that form the backbone of our communities.
@@ -55,7 +54,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Our Story Section */}
         <section className="py-20">
           <div className="container mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -75,7 +73,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Team Section */}
         <section className="bg-gray-50 py-20">
           <div className="container mx-auto px-6">
             <div className="text-center mb-12">
@@ -97,7 +94,6 @@ export default function AboutPage() {
           </div>
         </section>
         
-        {/* CTA Section */}
         <section className="bg-white">
           <div className="container mx-auto px-6 py-20 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Join Our Community of Growing Businesses</h2>
